@@ -1,0 +1,37 @@
+GPIOs 0-31, gpio:
+ gpio-2   (bebopr:e_stp        ) out lo
+ gpio-3   (bebopr:e_dir        ) out lo
+ gpio-4   (bebopr:x_ena        ) out lo
+ gpio-5   (bebopr:y_ena        ) out lo
+ gpio-6   (mmc_cd              ) in  lo
+ gpio-14  (bebopr:z_ena        ) out hi
+ gpio-15  (bebopr:e_ena        ) out hi
+ gpio-22  (sysfs               ) out lo
+ gpio-23  (sysfs               ) out lo
+ gpio-26  (bebopr:y_max        ) in  lo
+ gpio-27  (bebopr:z_min        ) in  lo
+
+GPIOs 32-63, gpio:
+ gpio-44  (bebopr:x_stp        ) out lo
+ gpio-45  (bebopr:x_dir        ) out lo
+ gpio-46  (bebopr:y_stp        ) out lo
+ gpio-47  (bebopr:y_dir        ) out lo
+ gpio-48  (bebopr:z_stp        ) out lo
+ gpio-49  (bebopr:z_dir        ) out lo
+ gpio-50  (sysfs               ) out lo
+ gpio-52  (eMMC_RSTn           ) out lo
+ gpio-53  (beaglebone:green:usr) out lo
+ gpio-54  (beaglebone:green:usr) out lo
+ gpio-55  (beaglebone:green:usr) out hi
+ gpio-56  (beaglebone:green:usr) out lo
+ gpio-59  (McASP Clock Enable P) out hi
+ gpio-61  (bebopr:status_led   ) out lo
+
+GPIOs 64-95, gpio:
+ gpio-65  (bebopr:z_max        ) in  lo
+ gpio-66  (bebopr:io_enable_n  ) out hi
+ gpio-67  (bebopr:x_min        ) in  lo
+ gpio-68  (bebopr:y_min        ) in  lo
+ gpio-69  (bebopr:x_max        ) in  lo
+
+GPIOs 96-127, gpio:

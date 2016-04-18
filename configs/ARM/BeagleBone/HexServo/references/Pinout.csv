@@ -1,0 +1,100 @@
+,,,BeagleBone Black expansion header P8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Header,Pin,CPU Pin,Pin Name,Pinmux register offset,mode 0,mode 1,mode 2,mode 3,mode 4,mode 5,mode 6,mode 7,,GPIO Bank,GPIO Pin,BeBoPr Function,PocketNC Function,Replicape Function,CRAMPS,PMDX-432,PMDX-432 Aux,PMDX-432 Ribbon Header,"Probotix
+PBX-BB","Xylotex
+BBB-DB25/26",Kernel GPIO Number,hal_pru_generic GPIO pin number,hal_bb_gpio pin number,,"Proposed
+ GPIO pin number",,Pin Modifiers,
+P8,1,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Value,Function
+P8,2,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,GPIO
+P8,3,R9,GPMC_AD6,0x818,gpmc_ad6,mmc1_dat6,,,,,,*gpio1_6,emmc,1,6,,,,,,,,,,38,70,103,,803,,1000,PRU Dedicated Output
+P8,4,T9,GPMC_AD7,0x81C,gpmc_ad7,mmc1_dat7,,,,,,*gpio1_7,emmc,1,7,,,,,,,,,,39,71,104,,804,,2000,PRU Dedicated Input
+P8,5,R8,GPMC_AD2,0x808,gpmc_ad2,mmc1_dat2,,,,,,*gpio1_2,emmc,1,2,,,,,,,,,,34,66,105,,805,,3000,"Special function (ie: hardware PWM, encoder, etc)"
+P8,6,T8,GPMC_AD3,0x80C,gpmc_ad3,mmc1_dat3,,,,,,*gpio1_3,emmc,1,3,,,,,,,,,,35,67,106,,806,,4000,Additional special functions (as required)
+P8,7,R7,GPMC_ADVn_ALE,0x890,gpmc_advn_ale,,timer4,,,,,*gpio2_2,,2,2,#IO_PWR_ON,E.Stop Button,,X Max,J1-Pin 11 In,J5-Pin 9,J1-Pin 21,,IPWR# / DB25.1,66,98,107,,807,,,
+P8,8,T7,GPMC_OEn_REn,0x894,gpmc_oen_ren,,timer7,,,,,*gpio2_3,,2,3,X_MIN,X Min,Fault_Ext2,X Min,J1-Pin 12 In,J5-Pin 12,J1-Pin 23,YLIMIT,,67,99,108,,808,,,GPIO Bank 0
+P8,9,T6,GPMC_BEn0_CLE,0x89C,gpmc_be0n_cle,,timer5,,,,,*gpio2_5,,2,5,X_MAX,X Max/Home,Fault_Y,Y Max,J1-Pin 10 In,,J1-Pin 19,,Stop / DB25.10,69,101,109,,809,,,GPIO Bank 1
+P8,10,U6,GPMC_WEn,0x898,gpmc_wen,,timer6,,,,,*gpio2_4,,2,4,Y_MIN,Y Min,Fault_X,Y Min,J1-Pin 13 In,J5-Pin 11,J1-Pin 25,,Home X / DB25.11,68,100,110,,810,,,GPIO Bank 2
+P8,11,R12,GPMC_AD13,0x834,gpmc_ad13,lcd_data18,mmc1_dat5,mmc2_dat1,eQEP2B_in,pr1_mii0_txd1,pr1_pru0_pru_r30_15,*gpio1_13,,1,13,X_DIR,X Dir,Step_Ext2,FET 1,J2-Pin 3 In,,J2-Pin 5,YENA / RELAY2 / BSTP / ASTP,X Dir / DB25.3,45,77,111,,811,,,GPIO Bank 3
+P8,12,T12,GPMC_AD12,0x830,gpmc_ad12,lcd_data19,mmc1_dat4,mmc2_dat0,eQEP2A_in,pr1_mii0_txd2,pr1_pru0_pru_r30_14,*gpio1_12,,1,12,X_STEP,X Step,Step_Y,X Dir,J2-Pin 4 In,,J2-Pin 7,XENA / RELAY3 / BSTP / ADIR,X Step / DB25.2,44,76,112,,812,,,PRU0 Dedicated Input
+P8,13,T10,GPMC_AD9,0x824,gpmc_ad9,lcd_data22,mmc1_dat1,mmc2_dat5,ehrpwm2B,pr1_mii0_col,,*gpio0_23,,0,23,PWM0,Spindle PWM,Step_Z,X Step,J1-Pin 16 Out,,J1-Pin 6,AENA / RELAY2,Spindle / DB25.14,23,55,113,,813,,,PRU0 Dedicated Output
+P8,14,T11,GPMC_AD10,0x828,gpmc_ad10,lcd_data21,mmc1_dat2,mmc2_dat6,ehrpwm2_tripzone_input,pr1_mii0_txen,,*gpio0_26,,0,26,Y_MAX,Y Max/Home,Dir_Z,Y Dir,J1-Pin 14 Out,J5-Pin 13,J1-Pin 2,ZLIMIT,Home Y / DB25.12,26,58,114,,814,,,
+P8,15,U13,GPMC_AD15,0x83C,gpmc_ad15,lcd_data16,mmc1_dat7,mmc2_dat3,eQEP2_strobe,pr1_ecap0_ecap_capin_apwm_o,pr1_pru0_pru_r31_15,*gpio1_15,,1,15,Y_DIR,Y Dir,Dir_Ext1,Y Step,J1-Pin 15 In,J5-Pin 10,J1-Pin 4,ESTOP,Y Dir / DB25.5,47,79,115,,815,,,
+P8,16,V13,GPMC_AD14,0x838,gpmc_ad14,lcd_data17,mmc1_dat6,mmc2_dat2,eQEP2_index,pr1_mii0_txd0,pr1_pru0_pru_r31_14,*gpio1_14,,1,14,Y_STEP,Y Step,Dir_Ext2,eMMC Ena,J2-Pin 6 In,,J2-Pin 11,ZENA / RELAY1 / BENA / RELAY1,Y Step / DB25.4,46,78,116,,816,,,
+P8,17,U12,GPMC_AD11,0x82C,gpmc_ad11,lcd_data20,mmc1_dat3,mmc2_dat7,ehrpwm0_synco,pr1_mii0_txd3,,*gpio0_27,,0,27,Z_MIN,Z Min,Step_X,ESTOP,J1-Pin 1 Out,,J1-Pin 1,ALIMIT,,27,59,117,,817,,,
+P8,18,V12,GPMC_CLK,0x88C,gpmc_clk,lcd_memory_clk,gpmc_wait1,mmc2_clk,pr1_mii1_crs,pr1_mdio_mdclk,mcasp0_fsr,*gpio2_1,,2,1,Z_MAX,Z Max/Home,Fault_Ext1,Z Dir,,,,XLIMIT,Home Z / DB25.13,65,97,118,,818,,,
+P8,19,U10,GPMC_AD8,0x820,gpmc_ad8,lcd_data23,mmc1_dat0,mmc2_dat4,ehrpwm2A,pr1_mii_mt0_clk,,*gpio0_22,,0,22,PWM1,B Home,Dir_Y,Z Step,J1-Pin 17 Out,,J1-Pin 8,PWM2,Mist / DB25.16,22,54,119,,819,,,
+P8,20,V9,GPMC_CSn2,0x884,gpmc_csn2,gpmc_be1n,mmc1_cmd,pr1_edio_data_in7,pr1_edio_data_out7,pr1_pru1_pru_r30_13,pr1_pru1_pru_r31_13,*gpio1_31,emmc,1,31,,,,,,,,,,63,95,120,,820,,,
+P8,21,U9,GPMC_CSn1,0x880,gpmc_csn1,gpmc_clk,mmc1_clk,pr1_edio_data_in6,pr1_edio_data_out6,pr1_pru1_pru_r30_12,pr1_pru1_pru_r31_12,*gpio1_30,emmc,1,30,,,,,,,,,,62,94,121,,821,,,
+P8,22,V8,GPMC_AD5,0x814,gpmc_ad5,mmc1_dat5,,,,,,*gpio1_5,emmc,1,5,,,,Servo 4,,,,,,37,69,122,,822,,,
+P8,23,U8,GPMC_AD4,0x810,gpmc_ad4,mmc1_dat4,,,,,,*gpio1_4,emmc,1,4,,,,Servo 3,,,,,,36,68,123,,823,,,
+P8,24,V7,GPMC_AD1,0x804,gpmc_ad1,mmc1_dat1,,,,,,*gpio1_1,emmc,1,1,,,,Servo 2,,,,,,33,65,124,,824,,,
+P8,25,U7,GPMC_AD0,0x800,gpmc_ad0,mmc1_dat0,,,,,,*gpio1_0,emmc,1,0,,,,Servo 1,,,,,,32,64,125,,825,,,
+P8,26,V6,GPMC_CSn0,0x87C,gpmc_csn0,,,,,,,*gpio1_29,,1,29,STATUS_LED,Pwr.Button,Dir_X,ESTOP Out,J2-Pin 13 In,,J2-Pin 25,,LED,61,93,126,,826,,,
+P8,27,U5,LCD_VSYNC,0x8E0,lcd_vsync,gpmc_a8,gpmc_a1,pr1_edio_data_in2,pr1_edio_data_out2,pr1_pru1_pru_r30_8,pr1_pru1_pru_r31_8,*gpio2_22,hdmi,2,22,,,,,,,,,,86,118,127,,827,,,
+P8,28,V5,LCD_PCLK,0x8E8,lcd_pclk,gpmc_a10,pr1_mii0_crs,pr1_edio_data_in4,pr1_edio_data_out4,pr1_pru1_pru_r30_10,pr1_pru1_pru_r31_10,*gpio2_24,hdmi,2,24,,,,,,,,,,88,120,128,,828,,,
+P8,29,R5,LCD_HSYNC,0x8E4,lcd_hsync,gpmc_a9,gpmc_a2,pr1_edio_data_in3,pr1_edio_data_out3,pr1_pru1_pru_r30_9,pr1_pru1_pru_r31_9,*gpio2_23,hdmi,2,23,,,,,,,,,,87,119,129,,829,,,
+P8,30,R6,LCD_AC_BIAS_EN,0x8EC,lcd_ac_bias_en,gpmc_a11,pr1_mii1_crs,pr1_edio_data_in5,pr1_edio_data_out5,pr1_pru1_pru_r30_11,pr1_pru1_pru_r31_11,*gpio2_25,hdmi,2,25,,,,,,,,,,89,121,130,,830,,,
+P8,31,V4,LCD_DATA14,0x8D8,lcd_data14,gpmc_a18,eQEP1_index,mcasp0_axr1,uart5_rxd,pr1_mii_mr0_clk,uart5_ctsn,*gpio0_10,hdmi,0,10,,,,,,,,,,10,42,131,,831,,,
+P8,32,T5,LCD_DATA15,0x8DC,lcd_data15,gpmc_a19,eQEP1_strobe,mcasp0_ahclkx,mcasp0_axr3,pr1_mii0_rxdv,uart5_rtsn,*gpio0_11,hdmi,0,11,,,,,,,,,,11,43,132,,832,,,
+P8,33,V3,LCD_DATA13,0x8D4,lcd_data13,gpmc_a17,eQEP1B_in,mcasp0_fsr,mcasp0_axr3,pr1_mii0_rxer,uart4_rtsn,*gpio0_9,hdmi,0,9,,,,,,,,,,9,41,133,,833,,,
+P8,34,U4,LCD_DATA11,0x8CC,lcd_data11,gpmc_a15,ehrpwm1B,mcasp0_ahclkr,mcasp0_axr2,pr1_mii0_rxd0,uart3_rtsn,*gpio2_17,hdmi,2,17,,,,,,,,,,81,113,134,,834,,,
+P8,35,V2,LCD_DATA12,0x8D0,lcd_data12,gpmc_a16,eQEP1A_in,mcasp0_aclkr,mcasp0_axr2,pr1_mii0_rxlink,uart4_ctsn,*gpio0_8,hdmi,0,8,,,,,,,,,,8,40,135,,835,,,
+P8,36,U3,LCD_DATA10,0x8C8,lcd_data10,gpmc_a14,ehrpwm1A,mcasp0_axr0,,pr1_mii0_rxd1,uart3_ctsn,*gpio2_16,hdmi,2,16,,,,,,,,,,80,112,136,,836,,,
+P8,37,U1,LCD_DATA8,0x8C0,lcd_data8,gpmc_a12,ehrpwm1_tripzone_input,mcasp0_aclkx,uart5_txd,pr1_mii0_rxd3,uart2_ctsn,*gpio2_14,hdmi,2,14,,,,,,,,,,78,110,137,,837,,,
+P8,38,U2,LCD_DATA9,0x8C4,lcd_data9,gpmc_a13,ehrpwm0_synco,mcasp0_fsx,uart5_rxd,pr1_mii0_rxd2,uart2_rtsn,*gpio2_15,hdmi,2,15,,,,,,,,,,79,111,138,,838,,,
+P8,39,T3,LCD_DATA6,0x8B8,lcd_data6,gpmc_a6,pr1_edio_data_in6,eQEP2_index,pr1_edio_data_out6,pr1_pru1_pru_r30_6,pr1_pru1_pru_r31_6,*gpio2_12,hdmi,2,12,,,,,,,,,,76,108,139,,839,,,
+P8,40,T4,LCD_DATA7,0x8BC,lcd_data7,gpmc_a7,pr1_edio_data_in7,eQEP2_strobe,pr1_edio_data_out7,pr1_pru1_pru_r30_7,pr1_pru1_pru_r31_7,*gpio2_13,hdmi,2,13,,,,,,,,,,77,109,140,,840,,,
+P8,41,T1,LCD_DATA4,0x8B0,lcd_data4,gpmc_a4,pr1_mii0_txd1,eQEP2A_in,,pr1_pru1_pru_r30_4,pr1_pru1_pru_r31_4,*gpio2_10,hdmi,2,10,,,,,,,,,,74,106,141,,841,,,
+P8,42,T2,LCD_DATA5,0x8B4,lcd_data5,gpmc_a5,pr1_mii0_txd0,eQEP2B_in,,pr1_pru1_pru_r30_5,pr1_pru1_pru_r31_5,*gpio2_11,hdmi,2,11,,,,,,,,,,75,107,142,,842,,,
+P8,43,R3,LCD_DATA2,0x8A8,lcd_data2,gpmc_a2,pr1_mii0_txd3,ehrpwm2_tripzone_input,,pr1_pru1_pru_r30_2,pr1_pru1_pru_r31_2,*gpio2_8,hdmi,2,8,,,,,,,,,,72,104,143,,843,,,
+P8,44,R4,LCD_DATA3,0x8AC,lcd_data3,gpmc_a3,pr1_mii0_txd2,ehrpwm0_synco,,pr1_pru1_pru_r30_3,pr1_pru1_pru_r31_3,*gpio2_9,hdmi,2,9,,,,,,,,,,73,105,144,,844,,,
+P8,45,R1,LCD_DATA0,0x8A0,lcd_data0,gpmc_a0,pr1_mii_mt0_clk,ehrpwm2A,,pr1_pru1_pru_r30_0,pr1_pru1_pru_r31_0,*gpio2_6,hdmi,2,6,,,,,,,,,,70,102,145,,845,,,
+P8,46,R2,LCD_DATA1,0x8A4,lcd_data1,gpmc_a1,pr1_mii0_txen,ehrpwm2B,,pr1_pru1_pru_r30_1,pr1_pru1_pru_r31_1,*gpio2_7,hdmi,2,7,,,,,,,,,,71,103,146,,846,,,
+P9,1,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Value,Function
+P9,2,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,GPIO
+P9,3,3.3V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1000,PRU Dedicated Output
+P9,4,3.3V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2000,PRU Dedicated Input
+P9,5,VDD_5V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3000,"Special function (ie: hardware PWM, encoder, etc)"
+P9,6,VDD_5V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4000,Additional special functions (as required)
+P9,7,SYS_5V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P9,8,SYS_5V,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GPIO Bank 0
+P9,9,PWR_BUT,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GPIO Bank 1
+P9,10,A10,WARMRSTn,0x9B8,*nRESETIN_OUT,,,,,,,,,,,IO_PWR_ON,,#Reset,#Reset,,,,,,,,,,,,,GPIO Bank 2
+P9,11,T17,GPMC_WAIT0,0x870,gpmc_wait0,gmii2_crs,gpmc_csn4,rmii2_crs_dv,mmc1_sdcd,pr1_mii1_col,uart4_rxd,*gpio0_30,,0,30,,Spindle Dir,X_Max,Z Max,J2-Pin 2 In,,J2-Pin 3,,A Step / DB25.8,30,62,211,,911,,,GPIO Bank 3
+P9,12,U18,GPMC_BEn1,0x878,gpmc_be1n,gmii2_col,gpmc_csn6,mmc2_dat3,gpmc_dir,pr1_mii1_rxlink,mcasp0_aclkr,*gpio1_28,,1,28,,,Step_Ext1,E0 Dir,J2-Pin 7 In,,J2-Pin 13,,,60,92,212,,912,,,PRU0 Dedicated Input
+P9,13,U17,GPMC_WPn,0x874,gpmc_wpn,gmii2_rxerr,gpmc_csn5,rmii2_rxerr,mmc2_sdcd,pr1_mii1_txen,uart4_txd,*gpio0_31,,0,31,,A Min,Z_Min,Z Min,J2-Pin 1 Out,J5-Pin 14,J2-Pin 1,,A Dir / DB25.9,31,63,213,,913,,,PRU0 Dedicated Output
+P9,14,U14,GPMC_A2,0x848,gpmc_a2,gmii2_txd3,rgmii2_td3,mmc2_dat1,gpmc_a18,pr1_mii1_txd2,ehrpwm1A,*gpio1_18,,1,18,PWM2,,,AXIS_ENA,J2-Pin 8 In,,J2-Pin 15,PWM3,Flood / DB25.17,50,82,214,,914,,,
+P9,15,R13,GPMC_A0,0x840,gpmc_a0,gmii2_txen,rgmii2_tctl,rmii2_txen,gpmc_a16,pr1_mii_mt1_clk,ehrpwm1_tripzone_input,*gpio1_16,,1,16,Z_STEP,Z Step,,FET 2,J2-Pin 9 In,,J2-Pin 17,,Z Step / DB25.6,48,80,215,,915,,,
+P9,16,T14,GPMC_A3,0x84C,gpmc_a3,gmii2_txd2,rgmii2_td2,mmc2_dat2,gpmc_a19,pr1_mii1_txd1,ehrpwm1B,*gpio1_19,,1,19,,A Max/Home,Y_Max,E0 Step,J2-Pin 10 In,,J2-Pin 19,,IDC.17,51,83,216,,916,,,
+P9,17,A16,SPI0_CS0,0x95C,spi0_cs0,mmc2_sdwp,I2C1_SCL,ehrpwm0_synci,pr1_uart0_txd,pr1_edio_data_in1,pr1_edio_data_out1,*gpio0_5,,0,5,B_DIR,,,E1 Step,J2-Pin 16 Out,J5-Pin 15,J2-Pin 6,,SCS,5,37,217,,917,,,
+P9,18,B16,SPI0_D1,0x958,spi0_d1,mmc1_sdwp,I2C1_SDA,ehrpwm0_tripzone_input,pr1_uart0_rxd,pr1_edio_data_in0,pr1_edio_data_out0,*gpio0_4,,0,4,B_STEP,,Z_Max,E1 Dir,J2-Pin 17 Out,J5-Pin 16,J2-Pin 8,,SDI,4,36,218,,918,,,
+P9,19,D17,UART1_RTSn,0x97C,uart1_rtsn,timer5,dcan0_rx,I2C2_SCL,spi1_cs1,pr1_uart0_rts_n,pr1_edc_latch1_in,*gpio0_13,,0,13,I2C_SCL,SCL,I2C_SCL,I2C_SCL,J7-Pin 3,J8-Pin 4,,,,13,45,219,,919,,,
+P9,20,D18,UART1_CTSn,0x978,uart1_ctsn,timer6,dcan0_tx,I2C2_SDA,spi1_cs0,pr1_uart0_cts_n,pr1_edc_latch0_in,*gpio0_12,,0,12,I2C_SDA,SDA,I2C_SDA,I2C_SDA,J7-Pin 2,J8-Pin 6,,,,12,44,220,,920,,,
+P9,21,B17,SPI0_D0,0x954,spi0_d0,uart2_txd,I2C2_SCL,ehrpwm0B,pr1_uart0_rts_n,pr1_edio_latch_in,EMU3,*gpio0_3,,0,3,A_DIR,*SpindleAtSpd,,FET 4,J2-Pin 14 Out,,J2-Pin 2,,SDO,3,35,221,,921,,,
+P9,22,A17,SPI0_SCLK,0x950,spi0_sclk,uart2_rxd,I2C2_SDA,ehrpwm0A,pr1_uart0_cts_n,pr1_edio_sof,EMU2,*gpio0_2,,0,2,A_STEP,,1-Wire,FET 6,J2-Pin 15 In,,J2-Pin 4,,SCK,2,34,222,,922,,,
+P9,23,V14,GPMC_A1,0x844,gpmc_a1,gmii2_rxdv,rgmii2_rctl,mmc2_dat0,gpmc_a17,pr1_mii1_txd3,ehrpwm0_synco,*gpio1_17,,1,17,Z_DIR,Z Dir,Y_Min,MACHINE_PWR,J2-Pin 11 In,,J2-Pin 21,,Z Dir / DB25.7,49,81,223,,923,,,
+P9,24,D15,UART1_TXD,0x984,uart1_txd,mmc2_sdwp,dcan1_rx,I2C1_SCL,,pr1_uart0_txd,pr1_pru0_pru_r31_16,*gpio0_15,,0,15,SPINDLE,Spindle On,Z_Fault,E2 Step,J2-Pin 12 In,,J2-Pin 23,,IDC.19,15,47,224,,924,,,
+P9,25,A14,MCASP0_AHCLKX,0x9AC,mcasp0_ahclkx,eQEP0_strobe,mcasp0_axr3,mcasp1_axr1,EMU4,pr1_pru0_pru_r30_7,pr1_pru0_pru_r31_7,*gpio3_21,,3,21,,,X_Min,LED,E0 Dir (J1-Pin 9) Out,,J1-Pin 17,ZDIR,IDC.3,117,149,225,,925,,,
+P9,26,D16,UART1_RXD,0x980,uart1_rxd,mmc1_sdwp,dcan1_tx,I2C1_SDA,,pr1_uart0_rxd,pr1_pru1_pru_r31_16,*gpio0_14,,0,14,AXES_ENA,Drivers Enable,,E2 Dir,J2-Pin 5 In,,J2-Pin 9,,IDC.21,14,46,226,,926,,,
+P9,27,C13,MCASP0_FSR,0x9A4,mcasp0_fsr,eQEP0B_in,mcasp0_axr3,mcasp1_fsx,EMU2,pr1_pru0_pru_r30_5,pr1_pru0_pru_r31_5,*gpio3_19,,3,19,,A Step,,FET 3,Z Dir (J1-Pin 7) Out,,J1-Pin 13,ADIR / Y2DIR,IDC.5,115,147,227,,927,,,
+P9,28,C12,MCASP0_AHCLKR,0x99C,mcasp0_ahclkr,ehrpwm0_synci,mcasp0_axr2,spi1_cs0,eCAP2_in_PWM2_out,pr1_pru0_pru_r30_3,pr1_pru0_pru_r31_3,*gpio3_17,,3,17,,A Dir,SPI_CS0,SPI-CS0,Y Dir (J1-Pin 5) Out,,J1-Pin 9,YDIR / Y1DIR,IDC.23,113,145,228,,928,,,
+P9,29,B13,MCASP0_FSX,0x994,mcasp0_fsx,ehrpwm0B,,spi1_d0,mmc1_sdcd,pr1_pru0_pru_r30_1,pr1_pru0_pru_r31_1,*gpio3_15,,3,15,,B Step,SPI_MISO,SPI-MISO,X Dir (J1-Pin 3) Out,,J1-Pin 5,XDIR,IDC.7,111,143,229,,929,,,
+P9,30,D12,MCASP0_AXR0,0x998,mcasp0_axr0,ehrpwm0_tripzone_input,,spi1_d1,mmc2_sdcd,pr1_pru0_pru_r30_2,pr1_pru0_pru_r31_2,*gpio3_16,,3,16,,B Dir,SPI_MOSI,SPI-MOSI,Y Step (J1-Pin 4) Out,,J1-Pin 7,YSTP / Y1STP,IDC.25,112,144,230,,930,,,
+P9,31,A13,MCASP0_ACLKX,0x990,mcasp0_aclkx,ehrpwm0A,,spi1_sclk,mmc0_sdcd,pr1_pru0_pru_r30_0,pr1_pru0_pru_r31_0,*gpio3_14,,3,14,,*Spindle Index,SPI_SCLK,SPI-SCLK,X Step (J1-Pin 2) Out,,J1-Pin 3,XSTP,IDC.9,110,142,231,,931,,,
+P9,32,VADC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P9,33,C8,AIN4,,*AIN4,,,,,,,,,,,THRM0,,,,,,,,IDC.11,,,,,,,,
+P9,34,AGND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P9,35,A8,AIN6,,*AIN6,,,,,,,,,,,THRM2,,,,,,,,,,,,,,,,
+P9,36,B8,AIN5,,*AIN5,,,,,,,,,,,THRM1,,,,,,,,IDC.2,,,,,,,,
+P9,37,B7,AIN2,,*AIN2,,,,,,,,,,,,,,,J4-Pin 4 (Analog In),J5-Pin 2,,,IDC.13,,,,,,,,
+P9,38,A7,AIN3,,*AIN3,,,,,,,,,,,,,,,J4-Pin 3 (Analog In),J5-Pin 4,,,IDC.4,,,,,,,,
+P9,39,B6,AIN0,,*AIN0,,,,,,,,,,,,,,,J4-Pin 2 (Analog In),J5-Pin 6,,,IDC.15,,,,,,,,
+P9,40,C7,AIN1,,*AIN1,,,,,,,,,,,,,,,J4-Pin 1 (Analog In),J5-Pin 8,,,IDC.6,,,,,,,,
+P9,41,D14,XDMA_EVENT_INTR1,0x9B4,xdma_event_intr1,,tclkin,clkout2,timer7,pr1_pru0_pru_r31_16,EMU3,*gpio0_20,,0,20,,, ,FET 5,,,,ASTP / Y2STP,Home A / DB25.15,20,52,241,,941,...or...,9410,
+P9,41.1,D13,MCASP0_AXR1,0x9A8,mcasp0_axr1,eQEP0_index,,mcasp1_axr0,EMU3,pr1_pru0_pru_r30_6,pr1_pru0_pru_r31_6,*gpio3_20,,3,20,,,,,E0 Step (J1-Pin 8) Out,,J1-Pin 15,,,116,148,,,991,maybe add,9411,
+P9,42,C18,ECAP0_IN_PWM0_OUT,0x964,eCAP0_in_PWM0_out,uart3_txd,spi1_cs1,pr1_ecap0_ecap_capin_apwm_o,spi1_sclk,mmc0_sdwp,xdma_event_intr2,*gpio0_7,,0,7,,,SPI_CS1,SPI-CS1,,,,ZSTP,IDC.8,7,39,242,,942,another digit,9420,
+P9,42.1,B12,MCASP0_ACLKR,0x9A0,mcasp0_aclkr,eQEP0A_in,mcasp0_axr2,mcasp1_aclkx,mmc0_sdwp,pr1_pru0_pru_r30_4,pr1_pru0_pru_r31_4,*gpio3_18,,3,18,,,,,Z Step (J1-Pin 6) Out,,J1-Pin 11,,,114,146,,,992,for use as,9421,
+P9,43,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,a pin sub-id?,,
+P9,44,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P9,45,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P9,46,GND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
