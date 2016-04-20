@@ -172,43 +172,43 @@ setp hpg.stepgen.02.steppin        819
 setp hpg.stepgen.02.dirpin         818
 
 
-# ################
-# A [3] Axis (Extruder)
-# ################
+## ################
+## A [3] Axis (Extruder)
+## ################
 
-# axis enable chain
-newsig emcmot.03.enable bit
-sets emcmot.03.enable FALSE
+## axis enable chain
+#newsig emcmot.03.enable bit
+#sets emcmot.03.enable FALSE
 
-net emcmot.03.enable <= axis.3.amp-enable-out
-net emcmot.03.enable => hpg.stepgen.03.enable
-
-
-# position command and feedback
-net emcmot.03.pos-cmd <= axis.3.motor-pos-cmd
-net emcmot.03.pos-cmd => hpg.stepgen.03.position-cmd
-
-net motor.03.pos-fb <= hpg.stepgen.03.position-fb
-net motor.03.pos-fb => axis.3.motor-pos-fb
+#net emcmot.03.enable <= axis.3.amp-enable-out
+#net emcmot.03.enable => hpg.stepgen.03.enable
 
 
-# timing parameters
-setp hpg.stepgen.03.dirsetup        [AXIS_3]DIRSETUP
-setp hpg.stepgen.03.dirhold         [AXIS_3]DIRHOLD
+## position command and feedback
+#net emcmot.03.pos-cmd <= axis.3.motor-pos-cmd
+#net emcmot.03.pos-cmd => hpg.stepgen.03.position-cmd
 
-setp hpg.stepgen.03.steplen         [AXIS_3]STEPLEN
-setp hpg.stepgen.03.stepspace       [AXIS_3]STEPSPACE
+#net motor.03.pos-fb <= hpg.stepgen.03.position-fb
+#net motor.03.pos-fb => axis.3.motor-pos-fb
 
-setp hpg.stepgen.03.position-scale  [AXIS_3]SCALE
 
-setp hpg.stepgen.03.maxvel          [AXIS_3]STEPGEN_MAX_VEL
-setp hpg.stepgen.03.maxaccel        [AXIS_3]STEPGEN_MAX_ACC
+## timing parameters
+#setp hpg.stepgen.03.dirsetup        [AXIS_3]DIRSETUP
+#setp hpg.stepgen.03.dirhold         [AXIS_3]DIRHOLD
 
-#setp hpg.stepgen.03.step_type       0
-# P8.30 GPIO2.25
-setp hpg.stepgen.03.steppin        916
-# P8.21 GPIO1.30
-setp hpg.stepgen.03.dirpin         912
+#setp hpg.stepgen.03.steplen         [AXIS_3]STEPLEN
+#setp hpg.stepgen.03.stepspace       [AXIS_3]STEPSPACE
+
+#setp hpg.stepgen.03.position-scale  [AXIS_3]SCALE
+
+#setp hpg.stepgen.03.maxvel          [AXIS_3]STEPGEN_MAX_VEL
+#setp hpg.stepgen.03.maxaccel        [AXIS_3]STEPGEN_MAX_ACC
+
+##setp hpg.stepgen.03.step_type       0
+## P8.30 GPIO2.25
+#setp hpg.stepgen.03.steppin        916
+## P8.21 GPIO1.30
+#setp hpg.stepgen.03.dirpin         912
 
 
 # ##################################################
