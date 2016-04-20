@@ -38,16 +38,16 @@ loadusr -Wn Therm hal_temp_bbb -n Therm -c 04:epcos_B57560G1104,05:epcos_B57560G
 # THREADS
 # ################################################
 
-#addf hpg.capture-position   servo-thread
-#addf bb_gpio.read                         servo-thread
-#addf motion-command-handler               servo-thread
-#addf motion-controller                    servo-thread
-#addf pid.0.do-pid-calcs                   servo-thread
-#addf pid.1.do-pid-calcs                   servo-thread
-#addf limit1.0                             servo-thread
-#addf limit1.1                             servo-thread
-#addf hpg.update             servo-thread
-#addf bb_gpio.write                        servo-thread
+addf hpg.capture-position   servo-thread
+addf bb_gpio.read                         servo-thread
+addf motion-command-handler               servo-thread
+addf motion-controller                    servo-thread
+addf pid.0.do-pid-calcs                   servo-thread
+addf pid.1.do-pid-calcs                   servo-thread
+addf limit1.0                             servo-thread
+addf limit1.1                             servo-thread
+addf hpg.update             servo-thread
+addf bb_gpio.write                        servo-thread
 
 
 # ######################################################
@@ -236,7 +236,7 @@ setp bb_gpio.p9.out-14.invert 1
 # Use halui.machine.is-on instead?
 net emcmot.00.enable => bb_gpio.p9.out-23
 
-# Tie machine power signal to the HexServo LED
+# Tie machine power signal to the CRAMPS LED
 # Feel free to tie any other signal you like to the LED
 net emcmot.00.enable => bb_gpio.p9.out-25
 
@@ -299,22 +299,22 @@ sets eMMC-disabled 0
 net eMMC-disabled bb_gpio.p8.out-16
 setp bb_gpio.p8.out-16.invert 1
 
-## Servo signals, output only, driven by an 'ACT125
-#
-#newsig servo.1 bit
-#newsig servo.2 bit
-#newsig servo.3 bit
-#newsig servo.4 bit
-#
-#sets servo.1 0
-#sets servo.2 0
-#sets servo.3 0
-#sets servo.4 0
-#
-#net servo.1 bb_gpio.p8.out-25
-#net servo.2 bb_gpio.p8.out-24
-#net servo.3 bb_gpio.p8.out-23
-#net servo.4 bb_gpio.p8.out-22
+# Servo signals, output only, driven by an 'ACT125
+
+newsig servo.1 bit
+newsig servo.2 bit
+newsig servo.3 bit
+newsig servo.4 bit
+
+sets servo.1 0
+sets servo.2 0
+sets servo.3 0
+sets servo.4 0
+
+net servo.1 bb_gpio.p8.out-25
+net servo.2 bb_gpio.p8.out-24
+net servo.3 bb_gpio.p8.out-23
+net servo.4 bb_gpio.p8.out-22
 
 
 # ##################################################
