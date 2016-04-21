@@ -49,10 +49,10 @@
         "P8.19",
 /*      "P8.20",    emmc    */
 /*      "P8.21",    emmc    */
-/*      "P8.22",    emmc    */
-/*      "P8.23",    emmc    */
-/*      "P8.24",    emmc    */
-/*      "P8.25",    emmc    */
+        "P8.22",
+        "P8.23",
+        "P8.24",
+        "P8.25",
         "P8.26",
 /*      "P8.27",    hdmi    */
 /*      "P8.28",    hdmi    */
@@ -99,22 +99,22 @@
         "P9.22",
         "P9.23",
         "P9.24",
-/*      "P9.25",    Audio   */
+        "P9.25",
         "P9.26",
         "P9.27",
-/*      "P9.28",    Audio   */
-/*      "P9.29",    Audio   */
+        "P9.28",
+        "P9.29",
         "P9.30",
-/*      "P9.31",    Audio   */
-/*      "P9.32",    VADC    */
-/*      "P9.33",    AIN4    */
-/*      "P9.34",    AGND    */
-/*      "P9.35",    AIN6    */
-/*      "P9.36",    AIN5    */
-/*      "P9.37",    AIN2    */
-/*      "P9.38",    AIN3    */
-/*      "P9.39",    AIN0    */
-/*      "P9.40",    AIN1    */
+        "P9.31",
+        "P9.32",
+        "P9.33",
+        "P9.34",
+        "P9.35",
+        "P9.36",
+        "P9.37",
+        "P9.38",
+        "P9.39",
+        "P9.40",
         "P9.41",
         "P9.41.1",
         "P9.42",
@@ -124,17 +124,17 @@
 /*      "P9.45",    GND     */
 /*      "P9.46",    GND     */
 
-        "uart1",
-        "uart2",
-        "uart4",
+//      "uart1",
+//      "uart2",
+//      "uart4",
 //      "uart5",    /* Conflicts with HDMI  */
 
-        "ehrpwm0A",
-        "ehrpwm0B",
-        "ehrpwm1A",
-        "ehrpwm1B",
-        "ehrpwm2A",
-        "ehrpwm2B",
+//      "ehrpwm0A",
+//      "ehrpwm0B",
+//      "ehrpwm1A",
+//      "ehrpwm1B",
+//      "ehrpwm2A",
+//      "ehrpwm2B",
 
 //        "epwmss0",
 //        "ehrpwm0",
@@ -146,10 +146,10 @@
 //        "ecap2",
 
         "i2c1",
-        "spi1",
-        "spi0",
-        "dcan0",
-        "dcan1",
+//      "spi1",
+//      "spi0",
+//      "dcan0",
+//      "dcan1",
 
         "pru0",
         "pru1",
@@ -1238,7 +1238,7 @@
             };
         };
     };
-    
+
     fragment@2 {
         target = <&ocp>;
         __overlay__ {
@@ -1614,7 +1614,7 @@
         __overlay__ {
             status = "okay";
             pinctrl-names = "default";
-            pinctrl-0 = <>; 
+            pinctrl-0 = <>;
 
             /* this is the configuration part */
             clock-frequency = <100000>;
@@ -1643,7 +1643,7 @@
 
             status = "okay";
             pinctrl-names = "default";
-            pinctrl-0 = <>; 
+            pinctrl-0 = <>;
 
             spi0channel@0 {
                 #address-cells = <1>;
@@ -1674,7 +1674,7 @@
         __overlay__ {
             status = "okay";
             pinctrl-names = "default";
-            pinctrl-0 = <>; 
+            pinctrl-0 = <>;
 
             #address-cells = <1>;
             #size-cells = <0>;
